@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Date>2020-07-17</Date>
+  <Beta>False</Beta>
+  <Category>Tools:System</Category>
+  <Name>maxViewStorageManager</Name>
+  <Project>docker-storman</Project>
+  <Changes>
+  </Changes>
+  <Overview>
+    Adaptec Maxview Storage Manager application
+  </Overview>
+  <Description>
+    Adaptec Maxview Storage Manager application
+  </Description>
+  <Registry>https://registry.hub.docker.com/r/fish2/docker-storman/</Registry>
+  <GitHub>https://github.com/Fish2/docker-storman</GitHub>
+  <Repository>fish2/docker-storman</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/storman</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/Back-code/unraid_storeman/master/storeman.png</Icon>
+</Containers>
