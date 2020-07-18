@@ -33,5 +33,5 @@
   </Data>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman.png</Icon>
 </Containers>
