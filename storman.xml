@@ -14,7 +14,7 @@
     Adaptec Maxview Storage Manager application
   </Description>
   <Registry>https://registry.hub.docker.com/r/fish2/docker-storman/</Registry>
-  <GitHub>https://github.com/Fish2/docker-storman</GitHub>
+  <GitHub>https://github.com/Back-code/docker-storman-unraid</GitHub>
   <Repository>fish2/docker-storman</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
@@ -33,5 +33,5 @@
   </Data>
   <WebUI>https://[IP]:[PORT:8443]</WebUI>
   <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman_icon.png</Icon>
 </Containers>
