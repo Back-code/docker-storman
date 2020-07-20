@@ -1,37 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <Date>2020-07-17</Date>
-  <Beta>False</Beta>
-  <Category>Tools:System</Category>
-  <Name>maxViewStorageManager</Name>
-  <Project>docker-storman</Project>
-  <Changes>
-  </Changes>
-  <Overview>
-    Adaptec Maxview Storage Manager application
-  </Overview>
-  <Description>
-    Adaptec Maxview Storage Manager application
-  </Description>
-  <Registry>https://registry.hub.docker.com/r/fish2/docker-storman/</Registry>
-  <GitHub>https://github.com/Back-code/docker-storman-unraid</GitHub>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MaxViewStorageManager</Name>
   <Repository>fish2/docker-storman</Repository>
-  <Support></Support>
-  <BindTime>true</BindTime>
+  <Registry>https://registry.hub.docker.com/r/fish2/docker-storman/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>true</Privileged>
+  <Support/>
+  <Project>docker-storman-unraid</Project>
+  <Overview>The Microsemi Adaptec&#xAE; maxView Storage Manager makes it simple to view, monitor, and configure all the storage in your system built on Microsemi  RAID adapters.&#xD;
+&#xD;
+</Overview>
+  <Category>Tools: Other: Status:Stable</Category>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman_icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The Microsemi Adaptec&#xAE; maxView Storage Manager makes it simple to view, monitor, and configure all the storage in your system built on Microsemi  RAID adapters.&#xD;
+&#xD;
+</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
-  <Environment/>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/storman</HostDir>
+      <HostDir>/mnt/user/appdata/maxViewStorageManager</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>https://[IP]:[PORT:8443]</WebUI>
-  <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/Back-code/docker-storman/master/storman_icon.png</Icon>
-</Containers>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Port" Target="8443" Default="" Mode="tcp" Description="Port" Type="Port" Display="always" Required="false" Mask="false">8443</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/maxViewStorageManager" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/maxViewStorageManager</Config>
+</Container>
